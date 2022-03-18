@@ -61,13 +61,23 @@
 							<li v-for="work in works">
 								<div class="image">
 									<div class="cover">
-										<el-image :src="work.cover" lazy></el-image>
+										<el-image :src="work.cover" fit="fill" :preview-src-list="work.preview" lazy>
+											<div slot="placeholder" class="el-image__loading"
+												style="width: 250px;height: 340px;">
+												加载中
+											</div>
+										</el-image>
 									</div>
 									<div class="book_preview">
-										<template v-for="img in work.preview">
+										点击封面可预览
+										<!-- <template v-for="img in work.preview">
 											<el-image :src="img" fit="fill" :preview-src-list="work.preview" lazy>
+												<div slot="placeholder" class="el-image__loading"
+													style="width: 73px;height: 100px;">
+													加载中
+												</div>
 											</el-image>
-										</template>
+										</template> -->
 									</div>
 								</div>
 								<div class="info">

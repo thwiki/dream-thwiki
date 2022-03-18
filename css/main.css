@@ -157,6 +157,21 @@ a:hover{color:#000;text-decoration:none;}
 .works .main_works .nlist_box ul>li .image{
 	min-height: 350px;
 }
+.works .main_works .nlist_box ul>li .image .el-image__loading{
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background: #f5f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #c0c4cc;
+    vertical-align: middle;
+}
 .works .main_works .nlist_box ul>li .image .cover{
     display: flex;
     margin-bottom: 10px;
