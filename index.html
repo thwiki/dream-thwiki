@@ -84,7 +84,7 @@
 									<div class="action">
 										<div class="download" v-if="work.download.length > 0">
 											<el-link class="thb-button" v-for="down in work.download" :underline="false"
-												target="_blank" :href="down.url">{{down.name}}下载<i
+												target="_blank" :href="down.url+(down.code?'?pwd='+down.code:'')">{{down.name}}下载{{down.code ? '（提取码：' + down.code + '）' : ''}}<i
 													class="el-icon-download el-icon--right"></i></el-link>
 										</div>
 										<div class="buy" v-show="work.buys.length > 0">
@@ -303,11 +303,13 @@
 							download: [
 								{
 									name: "本刊",
-									url: "https://pan.baidu.com/s/1V6XtlLf76fuMn3X77EUTPw?pwd=THB1"
+									url: "https://pan.baidu.com/s/1V6XtlLf76fuMn3X77EUTPw",
+									code:"THB1"
 								},
 								{
 									name: "副刊",
-									url: "https://pan.baidu.com/s/1EwMpN9UXRPa83gnDalOImg?pwd=THB1"
+									url: "https://pan.baidu.com/s/1EwMpN9UXRPa83gnDalOImg",
+									code:"THB1"
 								},
 							],
 							buys: [
@@ -422,7 +424,8 @@
 							download: [
 								{
 									name: "本刊",
-									url: "https://pan.baidu.com/s/1gUPUkFAD-iI7_ni-GhNPzw?pwd=THB1"
+									url: "https://pan.baidu.com/s/1gUPUkFAD-iI7_ni-GhNPzw",
+									code:"THB1"
 								},
 							],
 							buys: [
@@ -529,7 +532,8 @@
 							download: [
 								{
 									name: "本刊",
-									url: "https://pan.baidu.com/s/1Im-rXHmVKz5IgyyKiH_aaw?pwd=THB1"
+									url: "https://pan.baidu.com/s/1Im-rXHmVKz5IgyyKiH_aaw",
+									code:"THB1"
 								},
 							],
 							buys: [
