@@ -158,11 +158,9 @@ a:hover{color:#000;text-decoration:none;}
 	min-height: 350px;
 }
 .works .main_works .nlist_box ul>li .image .cover{
-	width:300px; height: 312px;
-	background: center 50% no-repeat;
-	background-size: contain;
-	margin: 0 auto;
-	margin-bottom: 10px;
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: center;
 }
 .works .main_works .nlist_box ul>li .image .book_preview{
 	display: flex;

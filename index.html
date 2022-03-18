@@ -60,12 +60,12 @@
 						<ul>
 							<li v-for="work in works">
 								<div class="image">
-									<div class="cover" :style="{
-												backgroundImage:'url(' + work.cover + ')'
-											}"></div>
+									<div class="cover">
+										<el-image :src="work.cover" lazy></el-image>
+									</div>
 									<div class="book_preview">
 										<template v-for="img in work.preview">
-											<el-image :src="img" fit="fill" :preview-src-list="work.preview">
+											<el-image :src="img" fit="fill" :preview-src-list="work.preview" lazy>
 											</el-image>
 										</template>
 									</div>
@@ -84,7 +84,8 @@
 									<div class="action">
 										<div class="download" v-if="work.download.length > 0">
 											<el-link class="thb-button" v-for="down in work.download" :underline="false"
-												target="_blank" :href="down.url+(down.code?'?pwd='+down.code:'')">{{down.name}}下载{{down.code ? '（提取码：' + down.code + '）' : ''}}<i
+												target="_blank" :href="down.url+(down.code?'?pwd='+down.code:'')">
+												{{down.name}}下载{{down.code ? '（提取码：' + down.code + '）' : ''}}<i
 													class="el-icon-download el-icon--right"></i></el-link>
 										</div>
 										<div class="buy" v-show="work.buys.length > 0">
@@ -121,13 +122,12 @@
 								<dd class="icon_mail"></dd><a><span class="mail">{{org.contact.mail}}</span></a>
 							</div>
 							<div class="weibo_box" v-if="org.contact.weibo">
-								<dd class="icon_weibo"></dd><a :href="org.contact.weibo"
-									target="_blank"><span class="mail">{{org.contact.weibo}}</span></a>
+								<dd class="icon_weibo"></dd><a :href="org.contact.weibo" target="_blank"><span
+										class="mail">{{org.contact.weibo}}</span></a>
 							</div>
 							<div class="bilibili_box" v-if="org.contact.bilibili">
-								<dd class="icon icon_bilibili"></dd><a
-									:href="org.contact.bilibili" target="_blank"><span
-										class="mail">{{org.contact.bilibili}}</span></a>
+								<dd class="icon icon_bilibili"></dd><a :href="org.contact.bilibili"
+									target="_blank"><span class="mail">{{org.contact.bilibili}}</span></a>
 							</div>
 						</div>
 					</div>
@@ -304,12 +304,12 @@
 								{
 									name: "本刊",
 									url: "https://pan.baidu.com/s/1V6XtlLf76fuMn3X77EUTPw",
-									code:"THB1"
+									code: "THB1"
 								},
 								{
 									name: "副刊",
 									url: "https://pan.baidu.com/s/1EwMpN9UXRPa83gnDalOImg",
-									code:"THB1"
+									code: "THB1"
 								},
 							],
 							buys: [
@@ -425,7 +425,7 @@
 								{
 									name: "本刊",
 									url: "https://pan.baidu.com/s/1gUPUkFAD-iI7_ni-GhNPzw",
-									code:"THB1"
+									code: "THB1"
 								},
 							],
 							buys: [
@@ -533,7 +533,7 @@
 								{
 									name: "本刊",
 									url: "https://pan.baidu.com/s/1Im-rXHmVKz5IgyyKiH_aaw",
-									code:"THB1"
+									code: "THB1"
 								},
 							],
 							buys: [
