@@ -1,516 +1,796 @@
 ﻿<!DOCTYPE html>
 <html lang="zh">
+
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="bookmark" type="image/x-icon" href="img/icon_logo.png"/>
+	<link rel="bookmark" type="image/x-icon" href="img/icon_logo.png" />
 	<link rel="shortcut icon" href="img/icon_logo.png">
 	<link rel="icon" href="img/icon_logo.png">
 	<title>梦缘社</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	<!-- 引入样式 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/element-ui@2.15.7/lib/theme-chalk/index.min.css" />
+	<!-- 引入组件库 -->
+	<script src="https://cdn.jsdelivr.net/npm/element-ui@2.15.7/lib/index.min.js"></script>
 </head>
+
 <body>
-	<!--top-->
-	<div class="header">
-		<a href="index.html"><div class="header_logo"></div></a>
-		<div class="header_menu">
-			<a href="#about">关于我们</a>
-			<a href="#works">作品</a>
-			<a href="#activity">活动</a>
-		</div>
-		<div class="clr"></div>
-	</div>
-
-	<!--banner-->
-	<div class="banner"></div>
-
-	<!--社团介绍-->
-	<div id="about" class="introduction">
-		<div class="num_1" onselectstart="return false;">01</div>
-		<div class="main_introduction">
-			<div class="pic_introduction"></div>
-			<div class="txt_introduction">
-				<p>
-					社团介绍
-					<em class="rectangle_1"></em>
-				</p>
-				<span>THB梦缘社，成立于2018年6月。</br>是由THBWiki的多个活跃编辑组织而成的，属THBWiki旗下同人社团。主要进行书籍类的东方二次同人创作。</span>
-				<div class="contact">
-					<i>联系方式：</i>
-					<div class="contact_box">
-						<div class="mail_box">
-							<dd class="icon_mail"></dd><a><span class="mail">occultism@thwiki.cc</span></a>
-						</div>
-						<div class="weibo_box">
-							<dd class="icon_weibo"></dd><a href="https://weibo.com/thwiki" target="_blank"><span class="mail">https://weibo.com/thwiki</span></a>
-						</div>
-					</div>
-				</div>
+	<div id="app">
+		<!--top-->
+		<div class="header">
+			<a href="index.html">
+				<div class="header_logo"></div>
+			</a>
+			<div class="header_menu">
+				<a href="#about">关于我们</a>
+				<a href="#works">作品</a>
+				<!-- <a href="#activity">活动</a> -->
 			</div>
 			<div class="clr"></div>
 		</div>
-	</div>
 
-	<!--成员介绍-->
-	<div class="staff">
-		<div class="num_2" onselectstart="return false;">02</div>
-		<div class="main_staff">
-			<p>成员介绍
-				<em class="rectangle_1"></em>
-			</p>
-			<div class="person">
-				<ul>
-					<li>
-						<div class="touxiang">
-							<img src="img/mengfu.png" width="100%"/>
-						</div>
-						<div class="namebox">
-							<span class="name">萌え芙兰</span>
-							<span class="link">主页：<a href="https://thwiki.cc/User:Rinmoe" target="_blank">THBWiki<i></i></a></span>
-						</div>
-					</li>
-					<li>
-						<div class="touxiang">
-							<img src="img/Cio.png" width="100%"/>
-						</div>
-						<div class="namebox">
-							<span class="name">Cio</span>
-							<span class="link">主页：<a href="https://thwiki.cc/User:Cio" target="_blank">THBWiki<i></i></a></span>
-						</div>
-					</li>
-					<li>
-						<div class="touxiang">
-							<img src="img/qixian.png" width="100%"/>
-						</div>
-						<div class="namebox">
-							<span class="name">七弦剑歌</span>
-							<span class="link">主页：<a href="https://thwiki.cc/User:A08131220172426" target="_blank">THBWiki<i></i></a></span>
-						</div>
-					</li>
-					<li>
-						<div class="touxiang">
-							<img src="img/youhai.png" width="100%"/>
-						</div>
-						<div class="namebox">
-							<span class="name">桜有海</span>
-							<span class="link">主页：<a href="https://thwiki.cc/User:Arumi" target="_blank">THBWiki<i></i></a></span>
-						</div>
-					</li>
-					<li>
-						<div class="touxiang">
-							<img src="img/laijie.png" width="100%"/>
-						</div>
-						<div class="namebox">
-							<span class="name">来姐</span>
-							<span class="link">主页：<a href="https://thwiki.cc/User:SunCL" target="_blank">THBWiki<i></i></a></span>
-						</div>
-					</li>
-					<li>
-						<div class="touxiang">
-							<img src="img/renyu.png" width="100%"/>
-						</div>
-						<div class="namebox">
-							<span class="name">人鱼兄贵</span>
-							<span class="link">主页：<a href="https://thwiki.cc/User:Steinsbun" target="_blank">THBWiki<i></i></a></span>
-						</div>
-					</li>
-					<li>
-						<div class="touxiang">
-							<img src="img/voyage1970.png" width="100%"/>
-						</div>
-						<div class="namebox">
-							<span class="name">Voyage1970</span>
-							<span class="link">主页：<a href="https://thwiki.cc/User:Voyage1970" target="_blank">THBWiki<i></i></a></span>
-						</div>
-					</li>
-					<li>
-						<div class="touxiang">
-							<img src="img/Yokar.png" width="100%"/>
-						</div>
-						<div class="namebox">
-							<span class="name">yokar</span>
-							<span class="link">主页：<a href="https://thwiki.cc/User:Yokar" target="_blank">THBWiki<i></i></a></span>
-						</div>
-					</li>
-					<div class="clr"></div>
-				</ul>
-			</div>
-		</div>
-	</div>
+		<!--banner-->
+		<!-- <div class="banner"></div> -->
 
-	<!--作品列表-->
-	<div id="works" class="works_box">
-		<div class="works">
-			<div class="num_3" onselectstart="return false;">03</div>
-			<div class="main_works">
-				<p>作品列表
+		<!-- 最新消息 -->
+		<div id="news" class="news_box">
+			<div onselectstart="return false;" class="num_2">01</div>
+			<div class="main_news">
+				<p>最新消息
 					<em class="rectangle_1"></em>
 				</p>
-				<div class="list_box">
-					<ul>
-						<li>
-							<a href="work_1.html" target="_blank">
-								<img src="img/work/1/cover.jpg" width="100%"/>
-							</a>
-							<h1 class="works_name">华胥三绝 礼</h1>
-							<span>杂志类型合同本</span>
-							<div class="btn_box">
-								<div class="price">
-									<em>￥</em><i>80(场贩)</i> / <em>￥</em><i>96(通贩)</i>
-								</div>							
-								<a href="https://item.taobao.com/item.htm?id=576091259645" target="_blank" class="btn_buy">网络贩卖</a>
-							</div>
-						</li>
-						<li>
-							<a href="work_2.html" target="_blank">
-								<img src="img/work/2/cover.jpg" width="100%"/>
-							</a>
-							<h1 class="works_name">华胥三绝 一</h1>
-							<span>杂志类型合同本</span>
-							<div class="btn_box">	
-								<div class="price">
-									<em>￥</em><i>120(实体书)</i> / <i>免费(下载版)</i>
+				<div class="news">
+					华胥三绝第四作——《华胥三绝 未》绝赞制作中！
+				</div>
+			</div>
+		</div>
+
+		<!--作品列表-->
+		<div id="works" class="works_box">
+			<div class="works">
+				<div class="num_3" onselectstart="return false;">02</div>
+				<div class="main_works">
+					<p>作品列表
+						<em class="rectangle_1"></em>
+					</p>
+					<div class="nlist_box">
+						<ul>
+							<li v-for="work in works">
+								<div class="image">
+									<div class="cover" :style="{
+												backgroundImage:'url(' + work.cover + ')'
+											}"></div>
+									<div class="book_preview">
+										<template v-for="img in work.preview">
+											<el-image :src="img" fit="fill" :preview-src-list="work.preview">
+											</el-image>
+										</template>
+									</div>
 								</div>
-								<a href="https://www.weibo.com/3197083635/HcnH38Sxm" target="_blank" class="btn_buy">网络发布</a>
+								<div class="info">
+									<div class="title">{{work.name}}</div>
+									<div class="menu">
+										<ul>
+											<li v-for="item in work.menu">
+												<div class="sub-title">{{item.title}}</div>
+												<div class="line"></div>
+												<div class="sub-actor">{{item.actor}}</div>
+											</li>
+										</ul>
+									</div>
+									<div class="action">
+										<div class="download" v-if="work.download.length > 0">
+											<el-link class="thb-button" v-for="down in work.download" :underline="false"
+												target="_blank" :href="down.url">{{down.name}}下载<i
+													class="el-icon-download el-icon--right"></i></el-link>
+										</div>
+										<div class="buy" v-show="work.buys.length > 0">
+											<el-link class="thb-button" v-for="buy in work.buys" :underline="false"
+												target="_blank">{{buy.name}}购买<i
+													class="el-icon-shopping-cart-full el-icon--right"></i></el-link>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--社团介绍-->
+		<div id="about" class="introduction">
+			<div class="num_1" onselectstart="return false;">03</div>
+			<div class="main_introduction">
+				<div class="pic_introduction" :style="{
+							backgroundImage:'url('+ org.logo +')'
+						}"></div>
+				<div class="txt_introduction">
+					<p>
+						社团介绍
+						<em class="rectangle_1"></em>
+					</p>
+					<span v-html="org.description"></span>
+					<div class="contact">
+						<i>联系方式：</i>
+						<div class="contact_box" v-if="org.contact.mail">
+							<div class="mail_box">
+								<dd class="icon_mail"></dd><a><span class="mail">{{org.contact.mail}}</span></a>
 							</div>
-						</li>
-						<li>
-							<a href="https://thwiki.cc/%E5%8D%8E%E8%83%A5%E4%B8%89%E7%BB%9D_%E5%B0%94" target="_blank">
-								<img src="img/work/3/cover.jpg" width="100%"/>
-							</a>
-							<h1 class="works_name">华胥三绝 尔</h1>
-							<span>杂志类型合同本</span>
-							<div class="btn_box">	
-								<div class="price">
-									<em>￥</em><i>80(场贩)</i> / <em>￥</em><i>96(通贩)</i>
-								</div>				
-								<a href="https://item.taobao.com/item.htm?id=603917888672" target="_blank" class="btn_buy">网络贩卖</a>
+							<div class="weibo_box" v-if="org.contact.weibo">
+								<dd class="icon_weibo"></dd><a :href="org.contact.weibo"
+									target="_blank"><span class="mail">{{org.contact.weibo}}</span></a>
 							</div>
+							<div class="bilibili_box" v-if="org.contact.bilibili">
+								<dd class="icon icon_bilibili"></dd><a
+									:href="org.contact.bilibili" target="_blank"><span
+										class="mail">{{org.contact.bilibili}}</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clr"></div>
+			</div>
+		</div>
+
+		<!--活动安排-->
+		<div id="activity" class="activity" v-if="false">
+			<div class="num_4" onselectstart="return false;">04</div>
+			<div class="main_activity">
+				<p>活动安排
+					<em class="rectangle_1"></em>
+				</p>
+				<div class="activity_list">
+					<ul>
+						<li v-for="event in events">
+							<div class="pic_activity" :style="{
+								backgroundImage:'url(' + event.cover + ')'
+							}"></div>
+							<div class="content_activity">
+								<span class="title" v-text="event.name"></span>
+								<span class="info">
+									<template v-if="event.new.length > 0">
+										<b>新刊</b>
+										<ul>
+											<li v-for="(info,index) in event.new">{{index + 1}}. <a
+													:href="getWorkInfo(info).url" target="_blank">{{info}}</a></li>
+										</ul>
+									</template>
+									<template v-if="event.old.length > 0">
+										<b>既刊</b>
+										<ul>
+											<li v-for="(info,index) in event.old">{{index + 1}}. <a
+													:href="getWorkInfo(info).url" target="_blank">{{info}}</a></li>
+										</ul>
+									</template>
+									<template v-if="event.goods.length > 0">
+										<b>周边</b>
+										<ul>
+											<li v-for="(info,index) in event.goods">{{index + 1}}. {{info}}</li>
+										</ul>
+									</template>
+									<template v-if="event.event.length > 0">
+										<b>活动</b>
+										<ul>
+											<li v-for="(info,index) in event.event">{{index + 1}}. {{info}}</li>
+										</ul>
+									</template>
+								</span>
+								<em>{{event.date}}</em>
+							</div>
+							<div class="clr"></div>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<!--作品列表-->
-	<div id="activity" class="activity">
-		<div class="num_4" onselectstart="return false;">04</div>
-		<div class="main_activity">
-			<p>活动安排
-				<em class="rectangle_1"></em>
-			</p>
-			<div class="activity_list">
+		<!--友情链接-->
+		<div class="blogroll">
+			<div class="blogroll_box">
+				<p>友情链接</p>
 				<ul>
 					<li>
-						<div class="pic_activity2"></div>
-						<div class="content_activity">
-							<span class="title">成都COMIDAY B-35</span>
-							<span class="info">
-								<b>新刊</b>
-								<ul>
-									<li>1. <a href="https://thwiki.cc/%E5%8D%8E%E8%83%A5%E4%B8%89%E7%BB%9D_%E5%B0%94" target="_blank">华胥三绝 尔</a></li>
-								</ul>
-								<b>周边</b>
-								<ul>
-									<li>1. 阿求&灵梦立牌</li>
-									<li>2. THBWiki LOGO 胸章</li>
-								</ul>
-							</span>
-							<em>2019年10月05-06日</em>
-						</div>
-						<div class="clr"></div>
+						<a href="https://thwiki.cc/" target="_blank">
+							<img src="img/thbwiki.png" />
+						</a>
 					</li>
 					<li>
-						<div class="pic_activity2"></div>
-						<div class="content_activity">
-							<span class="title">广州THONLY 东方游剧天DX C-10</span>
-							<span class="info">
-								<b>新刊</b>
-								<ul>
-									<li>1. <a href="https://thwiki.cc/%E5%8D%8E%E8%83%A5%E4%B8%89%E7%BB%9D_%E5%B0%94" target="_blank">华胥三绝 尔</a></li>
-								</ul>
-								<b>周边</b>
-								<ul>
-									<li>1. THBWiki LOGO 胸章</li>
-								</ul>
-							</span>
-							<em>2019年10月04日</em>
-						</div>
-						<div class="clr"></div>
+						<a href="http://www16.big.or.jp/~zun/top.html" target="_blank">
+							<img src="img/Alice.gif" />
+						</a>
 					</li>
-					<li>
-						<div class="pic_activity2"></div>
-						<div class="content_activity">
-							<span class="title">幻奏盛宴·幻想交响音乐会 ～ 流连的九河潮音2019</span>
-							<span class="info">
-								<b>新刊</b>
-								<ul>
-									<li>1. <a href="https://thwiki.cc/%E5%8D%8E%E8%83%A5%E4%B8%89%E7%BB%9D_%E5%B0%94" target="_blank">华胥三绝 尔</a></li>
-								</ul>
-								<b>周边</b>
-								<ul>
-									<li>1. THBWiki LOGO 胸章</li>
-								</ul>
-							</span>
-							<em>2019年10月03日</em>
-						</div>
-						<div class="clr"></div>
-					</li>
-					<li>
-						<div class="pic_activity1"></div>
-						<div class="content_activity">
-							<span class="title">上海THONLY 东方滴星盏 东-05</span>
-							<span class="info">
-								<b>既刊</b>
-								<ul>
-									<li>1. <a href="work_1.html" target="_blank">华胥三绝 礼</a></li>
-									<li>2. <a href="work_2.html" target="_blank">华胥三绝 一</a></li>
-								</ul>
-								<b>周边</b>
-								<ul>
-									<li>1. 阿求&灵梦立牌</li>
-									<li>2. THBWiki LOGO 胸章</li>
-								</ul>
-							</span>
-							<em>2019年8月17日</em>
-						</div>
-						<div class="clr"></div>
-					</li>
-					
-					<li>
-						<div class="pic_activity1"></div>
-						<div class="content_activity">
-							<span class="title">北京tho 京华万象展 正阳-3</span>
-							<span class="info">
-								<b>既刊</b>
-								<ul>
-									<li>1. <a href="work_1.html" target="_blank">华胥三绝 礼</a></li>
-									<li>2. <a href="work_2.html" target="_blank">华胥三绝 一</a></li>
-								</ul>
-								<b>周边</b>
-								<ul>
-									<li>1. 阿求&灵梦立牌</li>
-									<li>2. THBWiki LOGO 胸章</li>
-								</ul>
-							</span>
-							<em>2019年7月27日</em>
-						</div>
-						<div class="clr"></div>
-					</li>
-					<li>
-						<div class="pic_activity1"></div>
-						<div class="content_activity">
-							<span class="title">河北tho 华胥梦蝶祭 B4</span>
-							<span class="info">
-								<b>既刊</b>
-								<ul>
-									<li>1. <a href="work_2.html" target="_blank">华胥三绝 一</a></li>
-								</ul>
-							</span>
-							<em>2019年4月6日</em>
-						</div>
-						<div class="clr"></div>
-					</li>
-					<li>
-						<div class="pic_activity1"></div>
-						<div class="content_activity">
-							<span class="title">广州tho 东方游剧天Z C1-5</span>
-							<span class="info">
-								<b>既刊</b>
-								<ul>
-									<li>1. <a href="work_2.html" target="_blank">华胥三绝 一</a></li>
-								</ul>
-								<b>周边</b>
-								<ul>
-									<li>1. 阿求&灵梦立牌</li>
-									<li>2. 华胥三绝 礼&一 Riso海报</li>
-									<li>3. THBWiki LOGO 胸章</li>
-								</ul></span>
-							<em>2019年3月9日</em>
-						</div>
-						<div class="clr"></div>
-					</li>
-					<li>
-						<div class="pic_activity1"></div>
-						<div class="content_activity">
-							<span class="title">大连tho 幻想空闻集——风海小祭 C05</span>
-							<span class="info">
-								<b>既刊</b>
-								<ul>
-									<li>1. <a href="work_2.html" target="_blank">华胥三绝 一</a></li>
-								</ul>
-								<b>周边</b>
-								<ul>
-									<li>1. 阿求&灵梦立牌</li>
-									<li>2. 华胥三绝 礼&一 Riso海报</li>
-									<li>3. THBWiki LOGO 胸章</li>
-								</ul></span>
-							<em>2019年2月23日</em>
-						</div>
-						<div class="clr"></div>
-					</li>
-					<li>
-						<div class="pic_activity1"></div>
-						<div class="content_activity">
-							<span class="title">南京tho 东方桨灯影 A11</span>
-							<span class="info">
-								<b>既刊</b>
-								<ul>
-									<li>1. <a href="work_2.html" target="_blank">华胥三绝 一</a></li>
-								</ul>
-								<b>周边</b>
-								<ul>
-									<li>1. 阿求&灵梦立牌</li>
-									<li>2. 华胥三绝 礼&一 Riso海报</li>
-									<li>3. THBWiki LOGO 胸章</li>
-								</ul></span>
-							<em>2018年12月31日</em>
-						</div>
-						<div class="clr"></div>
-					</li>
-					<li>
-						<div class="pic_activity1"></div>
-						<div class="content_activity">
-							<span class="title">长沙tho 东方烛夜凝 A8-A9</span>
-							<span class="info">
-								<b>既刊</b>
-								<ul>
-									<li>1. <a href="work_2.html" target="_blank">华胥三绝 一</a></li>
-								</ul>
-								<b>周边</b>
-								<ul>
-									<li>1. 阿求&灵梦立牌</li>
-									<li>2. 华胥三绝 礼&一 Riso海报</li>
-									<li>3. THBWiki LOGO 胸章</li>
-								</ul></span>
-							<em>2018年12月22日</em>
-						</div>
-						<div class="clr"></div>
-					</li>
-					<li>
-						<div class="pic_activity1"></div>
-						<div class="content_activity">
-							<span class="title">上海Comicup M14</span>
-							<span class="info">
-								<b>新刊</b>
-								<ul>
-									<li>1. <a href="work_2.html" target="_blank">华胥三绝 一</a></li>
-								</ul>
-								<b>周边</b>
-								<ul>
-									<li>1. 阿求&灵梦立牌</li>
-									<li>2. 华胥三绝 礼&一 Riso海报</li>
-									<li>3. THBWiki LOGO 胸章</li>
-								</ul></span>
-							<em>2018年12月15-16日</em>
-						</div>
-						<div class="clr"></div>
-					</li>
-					<li>
-						<div class="pic_activity"></div>
-						<div class="content_activity">
-							<span class="title">西安tho 东方长歌梦 寄售</span>
-							<span class="info">
-								<b>既刊</b>
-								<ul>
-									<li>1. <a href="work_1.html" target="_blank">华胥三绝 礼</a></li>
-								</ul></span>
-							<em>2018年10月20日</em>
-						</div>
-						<div class="clr"></div>
-					</li>
-					<li>
-						<div class="pic_activity"></div>
-						<div class="content_activity">
-							<span class="title">天津 幻奏盛宴第三回 事前场贩</span><br />
-							<span class="title">广州tho 东方游剧天 B-21~22</span>
-							<span class="info">
-								<b>既刊</b>
-								<ul>
-									<li>1. <a href="work_1.html" target="_blank">华胥三绝 礼</a></li>
-								</ul>
-								<b>周边</b>
-								<ul>
-									<li>1. 阿求&小铃钥匙扣</li>
-									<li>2. THBWiki LOGO 胸章</li>
-								</ul></span>
-							<em>2018年10月5日</em>
-						</div>
-						<div class="clr"></div>
-					</li>
-					<li>
-						<div class="pic_activity"></div>
-						<div class="content_activity">
-							<span class="title">上海th09 东方萤灯筏 东-03</span>
-							<span class="info">
-								<b>新刊</b>
-								<ul>
-									<li>1. <a href="work_1.html" target="_blank">华胥三绝 礼</a></li>
-								</ul>
-								<b>周边</b>
-								<ul>
-									<li>1. 阿求&小铃钥匙扣</li>
-									<li>2. THBWiki LOGO 胸章</li>
-								</ul>
-								<b>活动</b>
-								<ul>
-									<li>1. 东方罕见物品展览馆</li>
-									<li>2. 东方旧作试玩体验</li>
-									<li>3. 到场成就获取</li>
-								</ul>
-							</span>
-							<em>2018年8月18日</em>
-						</div>
-						<div class="clr"></div>
-					</li>
-					<!--<li>
-						<div class="pic_activity"></div>
-						<div class="content_activity">
-							<span class="title">上海th09东方萤灯筏 东-03</span>
-							<span class="info">新刊 华胥三绝 礼</span>
-							<em>2018年8月18日</em>
-						</div>
-						<div class="clr"></div>
-					</li>-->
 				</ul>
 			</div>
 		</div>
-	</div>
 
-	<!--友情链接-->
-	<div class="blogroll">
-		<div class="blogroll_box">
-			<p>友情链接</p>
-			<ul>
-				<li>
-					<a href="https://thwiki.cc/" target="_blank">
-						<img src="img/thbwiki.png" />
-					</a>
-				</li>
-				<li>
-					<a href="http://www16.big.or.jp/~zun/top.html" target="_blank">
-						<img src="img/Alice.gif"/>
-					</a>
-				</li>
-			</ul>
+		<!--end-->
+		<div class="end">
+			<span>Copyright 2018-{{copyrightYear}} {{org.name}}版权所有
+			</span>
 		</div>
 	</div>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131267722-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
 
-	<!--end-->
-	<div class="end">
-		<span>Copyright 2018-<script>document.write((new Date()).getFullYear()+1)</script> 梦缘社版权所有</span>
-	</div>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131267722-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+		gtag('config', 'UA-131267722-1');
+	</script>
+	<script>
+		new Vue({
+			el: "#app",
+			data() {
+				return {
+					org: {
+						name: "THB梦缘社",
+						logo: "img/pic_introduction.png",
+						description: `THB梦缘社，成立于2018年6月。<br>
+是由THBWiki的多个活跃编辑组织而成的，属THBWiki旗下同人社团。主要进行书籍类的东方二次同人创作。<br>
+《华胥三绝》是面向中国东方Project爱好者，专注于社群文化、数据分析、内容考据等方面的杂志向同人志。主要作者均为深度东方Project爱好者，主要制作成员大多来自THBWiki，后者是国内首屈一指的专业性东方Project维基百科全书。`,
+						contact: {
+							mail: "occultism@thwiki.cc",
+							weibo: "",
+							bilibili: "https://space.bilibili.com/362841475",
+						},
+					},
+					works: [
+						{
+							name: "华胥三绝 礼",
+							type: "杂志类型合同本",
+							menu: [
+								{
+									title: "东社访谈录 出差版",
+									actor: "萌え芙兰、voyage1970、udumbara"
+								},
+								{
+									title: "THBWiki标志设计过程记录",
+									actor: "阿時、桜有海"
+								},
+								{
+									title: "原曲认知测验结果分析",
+									actor: "桜有海"
+								},
+								{
+									title: "源流：略述东方公式资料的汉化",
+									actor: "Cio"
+								},
+								{
+									title: "东方同人资源历史、现状与前瞻",
+									actor: "萝卜"
+								},
+								{
+									title: "东方同人作者商业作品列表",
+									actor: "yokar"
+								},
+								{
+									title: "我的THBWiki编辑见闻",
+									actor: "来姐"
+								},
+								{
+									title: "梦境世界和完全凭依：永夜异变的新线索？",
+									actor: "星期六上线"
+								},
+								{
+									title: "「神子」诞生的道教背景",
+									actor: "Tokibel"
+								},
+								{
+									title: "关于《蓬莱人形》与乙一作品的关系考察",
+									actor: "Wedneston"
+								},
+								{
+									title: "四百零七天的战乙女~Welcome to THBWiki",
+									actor: "落雪鸦杀"
+								},
+								{
+									title: "东方的「净土」",
+									actor: "深海盐Salt"
+								},
+							],
+							preview: [
+								"img/preview/华胥三绝_礼_推荐页面_1-1_页面_1.jpg",
+								"img/preview/华胥三绝_礼_推荐页面_1-1_页面_2.jpg",
+								"img/preview/华胥三绝_礼_推荐页面_1-2_页面_1.jpg",
+								"img/preview/华胥三绝_礼_推荐页面_1-2_页面_2.jpg",
+							],
+							cover: "img/work/1/cover.jpg",
+							download: [
+								{
+									name: "本刊",
+									url: "https://pan.baidu.com/s/1V6XtlLf76fuMn3X77EUTPw?pwd=THB1"
+								},
+								{
+									name: "副刊",
+									url: "https://pan.baidu.com/s/1EwMpN9UXRPa83gnDalOImg?pwd=THB1"
+								},
+							],
+							buys: [
 
-  gtag('config', 'UA-131267722-1');
-</script>
+							],
+							url: "work/1.html"
+						},
+						{
+							name: "华胥三绝 一",
+							type: "杂志类型合同本",
+							menu: [
+								{
+									title: "砥砺前行着的中国东方 与 犹抱琵琶半遮面的官方",
+									actor: "囧仙"
+								},
+								{
+									title: "填字游戏",
+									actor: "Subterranean Stars"
+								},
+								{
+									title: "华灯宴2018制作纪实",
+									actor: "东方华灯宴制作组"
+								},
+								{
+									title: "数据库消费下的东方同人文创作",
+									actor: "余命无几多"
+								},
+								{
+									title: "摩多罗的赐福问答～无缘者的狂祭",
+									actor: "深海盐Salt"
+								},
+								{
+									title: "幻想侧建筑考 之 博丽神社（其一）",
+									actor: "白矮星"
+								},
+								{
+									title: "旧诗二首",
+									actor: "胡逆天"
+								},
+								{
+									title: "「崩塌的天空，破碎的梦」中国第七次人气投票音乐部门简析",
+									actor: "Rinran"
+								},
+								{
+									title: "东方圣地巡礼～我永远的小地藏",
+									actor: "小优"
+								},
+								{
+									title: "设定的艺术与同人的奇迹～对东方Project设定的一些分析",
+									actor: "任意"
+								},
+								{
+									title: "归期未有期",
+									actor: "梦想"
+								},
+								{
+									title: "《东方雪莲华》主催北欧晨风的东游鉴专访",
+									actor: "东方同人游戏鉴赏组＆北欧晨风"
+								},
+								{
+									title: "浅谈国内东方二创发展与作者心态",
+									actor: "东方推荐刊Project Each"
+								},
+								{
+									title: "梦与安魂曲",
+									actor: "云卷语文书"
+								},
+								{
+									title: "秘封俱乐部初代会长活动记录",
+									actor: "星期六上线"
+								},
+								{
+									title: "原曲推断测试",
+									actor: "Rinran"
+								},
+								{
+									title: "妹红的一日归外",
+									actor: "Pheonix凤羽"
+								},
+								{
+									title: "戎神的末裔：东方Project与七福神",
+									actor: "Wedneston"
+								},
+								{
+									title: "幻想人形剧场～东方迎秋宴访谈记录",
+									actor: "全国地方东方调查组＆东方迎秋宴"
+								},
+								{
+									title: "东方2面BOSS四格",
+									actor: "找回车万专用"
+								},
+								{
+									title: "鸡兔同笼游戏",
+									actor: "人鱼兄贵"
+								},
+								{
+									title: "你知道吗",
+									actor: "voyage1970"
+								},
+								{
+									title: "浅谈东方Project的宗教观",
+									actor: "神吐槽砖家"
+								},
+							],
+							preview: [
+								"img/preview/华胥三绝_一_推荐页面_1-1_页面_1.jpg",
+								"img/preview/华胥三绝_一_推荐页面_1-1_页面_2.jpg",
+								"img/preview/华胥三绝_一_推荐页面_1-2_页面_1.jpg",
+								"img/preview/华胥三绝_一_推荐页面_1-2_页面_2.jpg",
+							],
+							cover: "img/work/2/cover.jpg",
+							download: [
+								{
+									name: "本刊",
+									url: "https://pan.baidu.com/s/1gUPUkFAD-iI7_ni-GhNPzw?pwd=THB1"
+								},
+							],
+							buys: [
 
+							],
+							url: "work/2.html"
+						},
+						{
+							name: "华胥三绝 尔",
+							type: "杂志类型合同本",
+							menu: [
+								{
+									title: "盼（封面故事）",
+									actor: "莫华"
+								},
+								{
+									title: "东方Project弹幕射击游戏发展史",
+									actor: "星期六上线"
+								},
+								{
+									title: "THBWiki年表",
+									actor: "有海Arumi"
+								},
+								{
+									title: "旧瓶装新酒——魔理沙设定探讨",
+									actor: "coke528"
+								},
+								{
+									title: "寻找“人见人爱”——同投关系简析",
+									actor: "宇岚hoshi"
+								},
+								{
+									title: "文果真报大澄清！！有效药物的“真正效果”",
+									actor: "八云萱草"
+								},
+								{
+									title: "东方同人小说怀旧随笔",
+									actor: "白贪狼"
+								},
+								{
+									title: "东方圈的知识沟构成探讨",
+									actor: "皇之子龙"
+								},
+								{
+									title: "填字小游戏",
+									actor: "Subterranean Stars"
+								},
+								{
+									title: "幻奏提问",
+									actor: "DoremyRinran"
+								},
+								{
+									title: "小游戏答案",
+									actor: ""
+								},
+								{
+									title: "当我们在谈设定时，我们在谈什么",
+									actor: "voyage1970"
+								},
+								{
+									title: "净土曼荼罗",
+									actor: "深海盐Salt"
+								},
+								{
+									title: "浅谈绵月姐妹的能力起源",
+									actor: "华胥的饿鬼"
+								},
+								{
+									title: "东方游戏作品各类判定机制简明说明",
+									actor: "小大圣"
+								},
+								{
+									title: "Steam游戏简评",
+									actor: "东游鉴"
+								},
+								{
+									title: "真珠岛音乐赏评",
+									actor: "udumbara"
+								},
+								{
+									title: "东方辉针城EX打分国一路线与心得",
+									actor: "乐之头脑"
+								},
+								{
+									title: "MC幻想乡场景介绍",
+									actor: ""
+								},
+								{
+									title: "法隆寺之旅",
+									actor: "凌澌"
+								},
+								{
+									title: "去世一时爽",
+									actor: "凤羽"
+								},
+							],
+							preview: [
+								"img/preview/华胥三绝_尔_推荐页面_1-1_页面_1.jpg",
+								"img/preview/华胥三绝_尔_推荐页面_1-1_页面_2.jpg",
+								"img/preview/华胥三绝_尔_推荐页面_1-2_页面_1.jpg",
+								"img/preview/华胥三绝_尔_推荐页面_1-2_页面_2.jpg",
+							],
+							cover: "img/work/3/cover.jpg",
+							download: [
+								{
+									name: "本刊",
+									url: "https://pan.baidu.com/s/1Im-rXHmVKz5IgyyKiH_aaw?pwd=THB1"
+								},
+							],
+							buys: [
+
+							],
+							url: "work/3.html"
+						},
+					],
+					events: [
+						{
+							name: "上海th09 东方萤灯筏 东-03",
+							cover: "img/work/1/cover.jpg",
+							new: [
+								"华胥三绝 礼",
+							],
+							old: [
+							],
+							goods: [
+								"阿求&小铃钥匙扣",
+								"THBWiki LOGO 胸章"
+							],
+							event: [
+								"东方罕见物品展览馆",
+								"东方旧作试玩体验",
+								"到场成就获取"
+							],
+							date: "2018年8月18日"
+						},
+						{
+							name: "天津 幻奏盛宴第三回 事前场贩广州tho 东方游剧天 B-21~22",
+							cover: "img/work/1/cover.jpg",
+							new: [
+							],
+							old: [
+								"华胥三绝 礼",
+							],
+							goods: [
+								"阿求&小铃钥匙扣",
+								"THBWiki LOGO 胸章"
+							],
+							event: [
+							],
+							date: "2018年10月5日"
+						},
+						{
+							name: "西安tho 东方长歌梦 寄售",
+							cover: "img/work/1/cover.jpg",
+							new: [
+							],
+							old: [
+								"华胥三绝 礼",
+							],
+							goods: [
+							],
+							event: [
+							],
+							date: "2018年10月20日"
+						},
+						{
+							name: "上海Comicup M14",
+							cover: "img/work/2/cover.jpg",
+							new: [
+								"华胥三绝 一",
+							],
+							old: [
+							],
+							goods: [
+								"阿求&灵梦立牌",
+								"华胥三绝 礼&一 Riso海报",
+								"THBWiki LOGO 胸章"
+							],
+							event: [
+							],
+							date: "2018年12月15-16日"
+						},
+						{
+							name: "长沙tho 东方烛夜凝 A8-A9",
+							cover: "img/work/2/cover.jpg",
+							new: [
+							],
+							old: [
+								"华胥三绝 一",
+							],
+							goods: [
+								"阿求&灵梦立牌",
+								"华胥三绝 礼&一 Riso海报",
+								"THBWiki LOGO 胸章"
+							],
+							event: [
+							],
+							date: "2018年12月22日"
+						},
+						{
+							name: "南京tho 东方桨灯影 A11",
+							cover: "img/work/2/cover.jpg",
+							new: [
+							],
+							old: [
+								"华胥三绝 一",
+							],
+							goods: [
+								"阿求&灵梦立牌",
+								"华胥三绝 礼&一 Riso海报",
+								"THBWiki LOGO 胸章"
+							],
+							event: [
+							],
+							date: "2018年12月31日"
+						},
+						{
+							name: "大连tho 幻想空闻集——风海小祭 C05",
+							cover: "img/work/2/cover.jpg",
+							new: [
+							],
+							old: [
+								"华胥三绝 一",
+							],
+							goods: [
+								"阿求&灵梦立牌",
+								"华胥三绝 礼&一 Riso海报",
+								"THBWiki LOGO 胸章"
+							],
+							event: [
+							],
+							date: "2019年2月23日"
+						},
+						{
+							name: "广州tho 东方游剧天Z C1-5",
+							cover: "img/work/2/cover.jpg",
+							new: [
+							],
+							old: [
+								"华胥三绝 一",
+							],
+							goods: [
+								"阿求&灵梦立牌",
+								"华胥三绝 礼&一 Riso海报",
+								"THBWiki LOGO 胸章"
+							],
+							event: [
+							],
+							date: "2019年3月9日"
+						},
+						{
+							name: "河北tho 华胥梦蝶祭 B4",
+							cover: "img/work/2/cover.jpg",
+							new: [
+							],
+							old: [
+								"华胥三绝 一",
+							],
+							goods: [
+							],
+							event: [
+							],
+							date: "2019年4月6日"
+						},
+						{
+							name: "北京tho 京华万象展 正阳-3",
+							cover: "img/work/2/cover.jpg",
+							new: [
+							],
+							old: [
+								"华胥三绝 礼",
+								"华胥三绝 一",
+							],
+							goods: [
+								"阿求&灵梦立牌",
+								"THBWiki LOGO 胸章"
+							],
+							event: [
+							],
+							date: "2019年7月27日"
+						},
+						{
+							name: "上海THONLY 东方滴星盏 东-05",
+							cover: "img/work/2/cover.jpg",
+							new: [
+							],
+							old: [
+								"华胥三绝 礼",
+								"华胥三绝 一",
+							],
+							goods: [
+								"阿求&灵梦立牌",
+								"THBWiki LOGO 胸章"
+							],
+							event: [
+							],
+							date: "2019年8月17日"
+						},
+						{
+							name: "幻奏盛宴·幻想交响音乐会 ～ 流连的九河潮音2019",
+							cover: "img/work/3/cover.jpg",
+							new: [
+								"华胥三绝 尔",
+							],
+							old: [
+							],
+							goods: [
+								"THBWiki LOGO 胸章"
+							],
+							event: [
+							],
+							date: "2019年10月03日"
+						},
+						{
+							name: "广州THONLY 东方游剧天DX C-10",
+							cover: "img/work/3/cover.jpg",
+							new: [
+							],
+							old: [
+								"华胥三绝 尔",
+							],
+							goods: [
+								"THBWiki LOGO 胸章"
+							],
+							event: [
+							],
+							date: "2019年10月04日"
+						},
+						{
+							name: "成都COMIDAY B-35",
+							cover: "img/work/3/cover.jpg",
+							new: [
+							],
+							old: [
+								"华胥三绝 尔",
+							],
+							goods: [
+								"阿求&灵梦立牌",
+								"THBWiki LOGO 胸章"
+							],
+							event: [
+							],
+							date: "2019年10月05-06日"
+						},
+					],
+				}
+			},
+			computed: {
+				copyrightYear() {
+					return new Date().getFullYear() + 1;
+				},
+			},
+			mounted() {
+				this.events.reverse();
+			},
+			methods: {
+				getWorkInfo(name) {
+					var tmp = this.works.filter(v => v.name == name).shift();
+					if (tmp) {
+						return { name: tmp.name, cover: tmp.cover, url: tmp.url };
+					}
+					else {
+						return { name: "获取失败", cover: "", url: "" };
+					}
+				}
+			}
+		})
+	</script>
 </body>
+
 </html>
