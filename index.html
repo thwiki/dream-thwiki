@@ -43,9 +43,7 @@
 				<p>最新消息
 					<em class="rectangle_1"></em>
 				</p>
-				<div class="news">
-					华胥三绝第四作——《华胥三绝 未》绝赞制作中！
-				</div>
+				<div class="news" v-html="org.news"></div>
 			</div>
 		</div>
 
@@ -59,7 +57,7 @@
 					</p>
 					<div class="nlist_box">
 						<ul>
-							<li v-for="work in works">
+							<li v-for="work in works" :id="work.id">
 								<div class="image">
 									<div class="cover">
 										<el-image :src="work.cover" fit="fill" :preview-src-list="work.preview" lazy>
@@ -69,6 +67,7 @@
 											</div>
 										</el-image>
 									</div>
+									<div class="date" v-text="'首发时间：' + work.date"></div>
 									<div class="book_preview">
 										点击封面可预览
 										<!-- <template v-for="img in work.preview">
@@ -101,7 +100,7 @@
 										</div>
 										<div class="buy" v-show="work.buys.length > 0">
 											<el-link class="thb-button" v-for="buy in work.buys" :underline="false"
-												target="_blank">{{buy.name}}购买<i
+												target="_blank" :href="buy.url">{{buy.name}}购买<i
 													class="el-icon-shopping-cart-full el-icon--right"></i></el-link>
 										</div>
 									</div>
@@ -249,9 +248,11 @@
 							weibo: "",
 							bilibili: "https://space.bilibili.com/362841475",
 						},
+						news: "THB梦缘社最新作品《华胥三绝 未》绝赞发售中！<br><a href='#hxsj3'>详情</a>",
 					},
 					works: [
 						{
+							id: "hxsj0",
 							name: "华胥三绝 礼",
 							type: "杂志类型合同本",
 							menu: [
@@ -326,9 +327,11 @@
 							buys: [
 
 							],
-							url: "work/1.html"
+							url: "work/1.html",
+							date: "2018年08月18日",
 						},
 						{
+							id: "hxsj1",
 							name: "华胥三绝 一",
 							type: "杂志类型合同本",
 							menu: [
@@ -442,9 +445,11 @@
 							buys: [
 
 							],
-							url: "work/2.html"
+							url: "work/2.html",
+							date: "2018年12月15日",
 						},
 						{
+							id: "hxsj2",
 							name: "华胥三绝 尔",
 							type: "杂志类型合同本",
 							menu: [
@@ -550,7 +555,64 @@
 							buys: [
 
 							],
-							url: "work/3.html"
+							url: "work/3.html",
+							date: "2019年10月03日"
+						},
+						{
+							id: "hxsj3",
+							name: "华胥三绝 未",
+							type: "杂志类型合同本",
+							menu: [
+								{
+									title: "《华胥三绝·未》封面背后的故事",
+									actor: "人鱼兄贵"
+								},
+								{
+									title: "2020-2022 东方大事件年表",
+									actor: "梦缘社编辑部"
+								},
+								{
+									title: "第135回“从第二家开始的广播”",
+									actor: "白神"
+								},
+								{
+									title: "我们都曾是东方众",
+									actor: "Pak长"
+								},
+								{
+									title: "我们所谈论的“东方”究竟是什么？",
+									actor: "voyage1970"
+								},
+								{
+									title: "同人幻想文化创作的颠峰对话",
+									actor: "星期六上线"
+								},
+								{
+									title: "同人摊贩场域与交流积极性",
+									actor: "KirisameAlice"
+								},
+								{
+									title: "喜爱的属性",
+									actor: "宇岚hoshi"
+								},
+								{
+									title: "神无月的无头骑士",
+									actor: "王子2326"
+								},
+							],
+							preview: [
+							],
+							cover: "img/work/4/cover.jpg",
+							download: [
+							],
+							buys: [
+								{
+									name: "本刊-淘宝",
+									url: "https://item.taobao.com/item.htm?spm=a230r.1.14.16.32c11fbcdMLwuj&id=681013893557&ns=1&abbucket=11#detail"
+								},
+							],
+							url: "work/4.html",
+							date: "2022年10月03日",
 						},
 					],
 					events: [
@@ -781,6 +843,20 @@
 							event: [
 							],
 							date: "2019年10月05-06日"
+						},
+						{
+							name: "深圳THO",
+							cover: "img/work/4/cover.jpg",
+							new: [
+							],
+							old: [
+								"华胥三绝 未",
+							],
+							goods: [
+							],
+							event: [
+							],
+							date: "2022年10月03日"
 						},
 					],
 				}

@@ -125,6 +125,7 @@ a:hover{color:#000;text-decoration:none;}
 .news_box .main_news p .rectangle_1{position: absolute; bottom: 0; left: 0; width: 275px; height: 30px; background-color: #ffb73f; z-index: -1;}
 .news_box .main_news{ padding-top: 270px; min-height: 500px;}
 .news_box .main_news .news{ font-size: 2em; margin:0 auto;text-align: center; justify-content: center; padding-top:2em}
+.news_box .main_news .news a{ color:#479bc5; }
 
 /*作品*/
 .works_box{width: 100%; min-height: 200px; position: relative;background: #f0f3fb; margin-top: 200px; padding-bottom: 50px;}
@@ -180,10 +181,14 @@ a:hover{color:#000;text-decoration:none;}
 .works .main_works .nlist_box ul>li .image .book_preview{
 	display: flex;
 	justify-content: center;
-	height: 100px;
+	/* height: 100px; */
 }
 .works .main_works .nlist_box ul>li .image .book_preview .el-image{
 	margin-right: 5px;
+}
+.works .main_works .nlist_box ul>li .image .date{
+	display: flex;
+	justify-content: center;
 }
 .works .main_works .nlist_box ul>li .info{
 	padding-top: 5px;
