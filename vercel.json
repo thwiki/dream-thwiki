@@ -5,8 +5,8 @@
 	},
 	"rewrites": [
 		{
-			"source": "/work_(?<id>.*)",
-			"destination": "/work/:id"
+			"source": "/work_(.*)",
+			"destination": "/work/$1"
 		}
 	],
 	"headers": [
